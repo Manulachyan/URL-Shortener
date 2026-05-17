@@ -26,9 +26,9 @@ const envSchema = z.object({
 
   JWT_REFRESH_EXPIRES_IN: z.string().default("7d"),
 
-  BASE_URL: z.url("BASE_URL must be a valid URL"),
+BASE_URL: z.string().url("BASE_URL must be a valid URL"),
 
-  FRONTEND_URL: z.url("FRONTEND_URL must be a valid URL"),
+FRONTEND_URL: z.string().url("FRONTEND_URL must be a valid URL"),
 
   BCRYPT_ROUNDS: z.string().default("12"),
 });
